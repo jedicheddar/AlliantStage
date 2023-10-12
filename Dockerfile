@@ -2,7 +2,7 @@
 FROM wordpress:latest
 
 # Copy custom configuration files if needed
-ADD themes /var/www/html/wp-content/themes
+COPY ./themes/ /var/www/html/wp-content/themes
 
 # Expose port 80 to access WordPress from outside the container
 EXPOSE 80
